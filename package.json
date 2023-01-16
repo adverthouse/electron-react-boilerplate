@@ -1,5 +1,6 @@
 {
-  "name": "Bellona Mobilya  A.Ş.",
+  "name": "Try  A.Ş.",
+  "productName": "Try",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -13,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.6.2",
-    "electron": "^22.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -23,6 +23,8 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
+    "electron": "^22.0.2",
+    "electron-packager": "^17.1.1",
     "electron-reload": "^1.5.0",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
