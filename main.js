@@ -37,13 +37,15 @@ app.on("ready", ()=> {
     mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
   });
 
-  let template = [{
-    label : "Item 1"
-  }, 
-  {
-      label : "item 2",
-      type: "radio"
-  }
+  let template = [
+    { label : "Item 1" }, 
+    { label : "item 2", type: "radio" },
+    { type: 'separator' },
+    { label : "Quit",
+      click: () => {
+        app.quit();
+      }
+    }
   ];
 
   let contextMenu = Menu.buildFromTemplate(template);
