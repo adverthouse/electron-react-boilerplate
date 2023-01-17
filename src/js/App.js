@@ -1,49 +1,34 @@
 
 import React from 'react';
 import Home from './Screens/Home';
+import Contact from './Screens/Contact';
+import Blog from './Screens/Blog';
+import { Routes,  Route,  NavLink, Link } from 'react-router-dom';
 
 export default function App() {
 
   return (
     <>
-      <div className="mainApp">
-      <div className="topBar">
-        <div className="titleBar">
-          <button id="showHideMenus" className="toggleButton"></button>
-          <img src="icons/icon_top_bar.png" alt="" />
-          <div className="title">
-            My App Top Bar 2
-          </div>          
+      <div className="container">
+        <div className='row'>
+          <div className='col-12'>
+            <nav>
+              <NavLink to="/">Ana sayfa</NavLink>
+              <NavLink to="/blog">Blog</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
+            </nav>
+          </div>
         </div>
-        <div className="titleBarBtns">
-          <button id="minimizeBtn" className="topBtn minimizeBtn"></button>
-          <button id="maxResBtn" className="topBtn maximizeBtn"></button>
-          <button id="closeBtn" className="topBtn closeBtn"></button>
-        </div>
-      </div>
-      <div className="contentArea">
-        <div id="mySidebar" className="leftMenu">
-
-        </div>
-        <div className="contentPages">
-                <h1>I am App Component!!! Hello !</h1>
-                <Home />
-                <button className='btn btn-primary' onClick={() => {
-                    electron.notificationApi.sendNotification('My custom notification!');
-                }}>Notify</button>
-
-
-                <button className='btn btn-primary' onClick={() => {
-                    electron.notificationApi.newWindow('');
-                }}>Yeni encere aç</button>
-
-                <br/><br/><br/><br/>
-                <button className='btn btn-primary' onClick={() => {
-                    electron.notificationApi.quitApp();
-                }}>Uygulamadan çık</button>
+        <div className="row">
+          <div className='col-12'>
+            <Routes>
+              <Route path="/" exact   element={ <Home /> } />
+              <Route path="/contact" element={ <Contact /> } />
+              <Route path="/blog" element={ <Blog /> } />                       
+            </Routes>
+          </div>
         </div>
       </div>
-    </div>
     </>
   )
 } 

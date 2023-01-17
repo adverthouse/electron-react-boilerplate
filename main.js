@@ -21,7 +21,7 @@ app.on("ready", ()=> {
     minHeight:500,
     minWidth:500,
     backgroundColor: "white",
-    frame : false,
+    frame : true,
     webPreferences: {
       nodeIntegration: true,
       worldSafeExecuteJavaScript: true,
