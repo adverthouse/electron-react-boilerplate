@@ -1,4 +1,12 @@
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
+.titleBar {
+  background-color: red;
+  height: 40px;
+  border-bottom: 1px solid #d0d0d0;
+  -webkit-app-region: drag;    /* Allow user to drag the window using this titlebar */
+  -webkit-user-select: none;   /* Prevent user from selecting things */
+  user-select: none;
+}
 
 h1 {
   color: red;

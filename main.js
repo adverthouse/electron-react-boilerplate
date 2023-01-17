@@ -18,18 +18,21 @@ app.on("ready", ()=> {
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
+    minHeight:500,
+    minWidth:500,
     backgroundColor: "white",
-   // frame : false,
+    frame : false,
     webPreferences: {
-      nodeIntegration: false,
+      nodeIntegration: true,
       worldSafeExecuteJavaScript: true,
-      contextIsolation: true,
+      contextIsolation: true, 
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
   mainWindow.loadFile("index.html");
 
+  /*
   tray = new Tray("orbit.png");
   tray.setToolTip("Hello from space");
 
@@ -50,7 +53,7 @@ app.on("ready", ()=> {
 
   let contextMenu = Menu.buildFromTemplate(template);
   tray.setContextMenu(contextMenu);
-
+*/
 
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(mainMenu);
